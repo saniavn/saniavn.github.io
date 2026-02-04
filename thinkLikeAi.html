@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Think Like AI - Versions</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <style>
+      #projects {
+        box-sizing: border-box;
+        min-height: 100vh;
+        height: fit-content;
+        padding-bottom: 4rem;
+      }
+
+      .article-container {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        border-radius: 2rem;
+        background: #f0f0f0;
+      }
+
+      .project-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+        border-radius: 2rem;
+      }
+
+      .article-container:hover .project-img {
+        transform: scale(1.05);
+      }
+
+      .project-description-scroll {
+        height: 150px;
+        overflow-y: auto;
+        text-align: left;
+        font-size: 0.9rem;
+        color: rgb(85, 85, 85);
+        padding-right: 5px;
+        margin-bottom: 15px;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      /* Custom Scrollbar */
+      .project-description-scroll::-webkit-scrollbar {
+        width: 6px;
+      }
+      .project-description-scroll::-webkit-scrollbar-thumb {
+        background-color: rgb(163, 163, 163);
+        border-radius: 3px;
+      }
+
+      .details-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 600px;
+        flex: 1;
+      }
+
+      .about-containers {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .publications-container {
+        text-align: left;
+        padding: 0;
+      }
+
+      .pub-item {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgb(163, 163, 163);
+      }
+
+      .pub-item:last-child {
+        border-bottom: none;
+      }
+
+      .pub-title {
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: black;
+        display: block;
+        margin-bottom: 0.3rem;
+        text-decoration: none;
+      }
+
+      .pub-title:hover {
+        color: grey;
+        text-decoration: underline;
+        text-underline-offset: 0.5rem;
+      }
+
+      .pub-meta {
+        font-size: 0.95rem;
+        color: rgb(85, 85, 85);
+        font-style: italic;
+        line-height: 1.5;
+      }
+
+      .version-tag {
+        display: inline-block;
+        background: rgb(230, 230, 230);
+        color: black;
+        font-size: 0.75rem;
+        padding: 2px 8px;
+        border-radius: 4px;
+        margin-left: 10px;
+        font-weight: normal;
+        vertical-align: middle;
+      }
+
+      @media screen and (max-width: 1200px) {
+        #projects,
+        #publications {
+          margin: 0 5%;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        #projects,
+        #publications {
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Software Versions</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="index.html#projects">Back to Portfolio</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <!-- <div class="logo">Think Liek AI</div> -->
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li>
+            <a href="index.html#projects" onclick="toggleMenu()"
+              >Back to Portfolio</a
+            >
+          </li>
+        </div>
+      </div>
+    </nav>
+
+    <section id="projects">
+      <!-- <p class="section__text__p1">Software Versions</p> -->
+      <h1 class="title">Think Like AI</h1>
+
+      <div
+        class="section-container"
+        style="margin-bottom: 2rem; display: block; height: auto"
+      >
+        <div
+          class="text-container"
+          style="text-align: center; max-width: 800px; margin: 0 auto"
+        >
+          <p>
+            "Think Like AI" is an interactive tool designed to help students
+            understand Large Language Models. Below are the specific versions
+            developed for my research.
+          </p>
+        </div>
+      </div>
+
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/TLA-latest.png"
+                alt="Fall 2025"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Fall 2025 – Present
+            </h2>
+            <div class="project-description-scroll">
+              This version makes LLM probabilistic text generation visible
+              through dual visualizations (bar charts and pie charts) showing
+              how sampling parameters (temperature and top-p) affect probability
+              distributions. Goes beyond 7th grade probability concepts and
+              Texas TEKS standards by introducing students to transformations on
+              probability distributions.
+            </div>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="
+                  location.href =
+                    'https://github.com/saniavn/Think-Like-AI-Fall-2025-Present'
+                "
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="
+                  location.href =
+                    'https://attentionapp-1338190964.us-central1.run.app'
+                "
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/prjoect-7.png"
+                alt="Summer 2025"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Summer 2025</h2>
+            <div class="project-description-scroll">
+              This version builds on the Spring 2025 design by adding
+              visualizations of attention weights and word embeddings. Students
+              can explore how language models "pay attention" to specific words
+              in a prompt through two-dimensional attention weight displays. The
+              word embedding visualization shows how words are represented
+              numerically in the model.
+            </div>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href = ''"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="
+                  location.href =
+                    'https://attentionapp-1338190964.us-central1.run.app/'
+                "
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/prjoect-4.png"
+                alt="Spring 2025"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Spring 2025</h2>
+            <div class="project-description-scroll">
+              This version features two interactive modules: Next-Word
+              Generation and Prompt Construction. Students can adjust sampling
+              parameters (temperature and top-p) and observe their effects in
+              real-time. Designed for middle school students (grades 6-8), this
+              version was piloted with 35 students in after-school sessions.
+            </div>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="
+                  location.href =
+                    'https://github.com/saniavn/ThinkLikeAI/tree/main'
+                "
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href = '#'"
+              >
+                Archived Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" style="height: fit-content">
+      <p class="section__text__p1">Research Output</p>
+      <h1 class="title">Associated Publications</h1>
+
+      <div class="publications-container">
+        <div class="pub-item">
+          <a href="#" class="pub-title">
+            "Exploring How LLMs Use Probability to Generate Text: Interactive
+            Activities for Middle School Students"
+            <span class="version-tag">Fall 2025 Version</span>
+          </a>
+          <p class="pub-meta">
+            Saniya Vahedian Movahed, John Quarles, David Touretzky.
+            <br />
+            <i
+              >Proceedings of the ACM Technical Symposium on Computer Science
+              Education (SIGCSE 2026)</i
+            >
+          </p>
+        </div>
+
+        <div class="pub-item">
+          <a href="#" class="pub-title">
+            "Think Like AI: Hands-On Exploration of Sampling Parameters and
+            Prompts for Middle School Students’ Generative AI Literacy"
+            <span class="version-tag">Uses Spring 2025 Version</span>
+          </a>
+          <p class="pub-meta">
+            <br />
+            <i
+              >Proceedings of the ACM Technical Symposium on Computer Science
+              Education (SIGCSE 2026)</i
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
+    <script src="script.js"></script>
+  </body>
+</html>

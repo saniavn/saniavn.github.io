@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Saniya Vahedian Movahed - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <style>
 
-
-
+    </style>
   </head>
   <body>
     <nav id="desktop-nav">
@@ -19,7 +19,6 @@
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#experience">News</a></li>
-          <!-- <li><a href="#news">News</a></li> -->
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -43,19 +42,13 @@
     <section id="profile">
       <div class="section__pic-container">
         <img src="./assets/profile-pic.png" alt="profile picture" />
-        <!-- <button class="theme-toggle" onclick="toggleTheme()"> ☀️ </button> -->
       </div>
       <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
+        <p class="section__text__p1">Hi, I'm</p>
         <h1 class="title">Sania</h1>
-        <p class="section__text__p2"></p>
+
+
         <div class="btn-container">
-          <!-- <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
-            Download CV
-          </button> -->
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
             Contact Info
           </button>
@@ -82,70 +75,64 @@
         </div>
       </div>
     </section>
+    
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
       <div class="section-container">
-        <!-- <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div> -->
         <div class="about-details-container">
+          
           <div class="text-container">
             <p>
-      I am currently a fifth-year PhD student, focusing on developing software to introduce children to AI.
-      My PhD journey began with studying multi-armed bandits at <a href="https://www.pearl-robotics.com/home" target="_blank">the PeARL Lab</a>, before I transitioned to pursuing my passion for educational technology in AI.<br/>
-      Prior to my PhD, I gained valuable experience at <a href="https://anm.com" target="_blank">the anm</a>, <a href="https://www.broadinstitute.org/" target="_blank">the Broad Institute</a>, and <a href="https://privacytools.seas.harvard.edu/" target="_blank">the Harvard Privacy Tools Project</a>.<br/>
+              I am currently a fifth-year PhD student, advised by <a href="https://www.cs.cmu.edu/~dst/" target="_blank">David Touretzky</a> and <a href="https://caicc.utsa.edu/faculty/profiles/quarles-john.html" target="_blank">John Quarles</a>, focusing on developing software to introduce children to AI.
+              My PhD journey began with studying multi-armed bandits at <a href="https://www.pearl-robotics.com/home" target="_blank">the PeARL Lab</a>, before I transitioned to pursuing my passion for educational technology in AI.
+            </p>
 
-      Outside of my professional interests, I enjoy cycling and hiking through nature. I’ve recently taken up running—mostly to chase after city feral cats, which I also enjoy caring for.
-  </p>
+            <p>
+              Prior to my PhD, I gained valuable experience at <a href="https://anm.com" target="_blank">the anm</a>, <a href="https://www.broadinstitute.org/" target="_blank">the Broad Institute</a>, and <a href="https://privacytools.seas.harvard.edu/" target="_blank">the Harvard Privacy Tools Project</a>.
+            </p>
 
+            <div class="job-market-banner">
+              I am currently on the academic job market.
+            </div>
 
-
+            <p>
+              Outside of my professional interests, I enjoy cycling and hiking through nature. I recently completed my first marathon in December 2025 and am training for my second one soon. I also enjoy caring for city feral cats.
+            </p>
           </div>
           <div class="about-containers">
             <div class="details-container">
               <h3>Skills</h3>
-
               <p>
-    <span class="skill">Python</span>
-    <span class="skill">R</span>
-    <span class="skill">C</span>
-    <span class="skill">HTML</span>
-    <span class="skill">CSS</span>
-    <span class="skill">JavaScript</span>
-
-  <span class="skill">Pandas</span>
-  <span class="skill">NumPy</span>
-  <span class="skill">dply</span>
-  <span class="skill">Matplotlib</span>
-  <span class="skill">Seurat</span>
-  <span class="skill"> Bioconductor</span>
-  <span class="skill"> SciPy</span>
-  <span class="skill">Matplotlib</span>
-  <span class="skill">SVM</span>
-  <span class="skill"> K-means</span>
-  <span class="skill"> PCA</span>
-  <span class="skill"> t-SNE</span>
-  <span class="skill">UMAP</span>
-
-  </p>
-
-              <!-- <p>Student Reseacher, AI Institute for Collaborative Assistance and Responsive Interaction for Networked Groups (AI-CARING) 2021-present</p> -->
+                <span class="skill">Python</span>
+                <span class="skill">R</span>
+                <span class="skill">C</span>
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">Pandas</span>
+                <span class="skill">NumPy</span>
+                <span class="skill">dplyr</span>
+                <span class="skill">Matplotlib</span>
+                <span class="skill">Seurat</span>
+                <span class="skill">Bioconductor</span>
+                <span class="skill">SciPy</span>
+                <span class="skill">Matplotlib</span>
+                <span class="skill">SVM</span>
+                <span class="skill">K-means</span>
+                <span class="skill">PCA</span>
+                <span class="skill">t-SNE</span>
+                <span class="skill">UMAP</span>
+              </p>
             </div>
             <div class="details-container">
-
               <h3>Education</h3>
               <p>
-  Ph.D. in Computer Science, University of Texas at San Antonio (in progress)<br />
-  M.Sc. in Computer Science, Western Michigan University <br/>
-  M.Sc. in Artificial Intelligence, Shiraz University <br/>
-  B.E. in Computer Software Engineering, Azad University
-</p>
-
+                Ph.D. in Computer Science, University of Texas at San Antonio (in progress)<br />
+                M.Sc. in Computer Science, Western Michigan University <br/>
+                M.Sc. in Artificial Intelligence, Shiraz University <br/>
+                B.E. in Computer Software Engineering, Azad University
+              </p>
             </div>
           </div>
 
@@ -167,25 +154,26 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/prjoect-7.png"
+                src="./assets/TLA-latest.png"
                 alt="Project 1"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Think Like AI 2</h2>
-            <p class="project-description">An interactive tool that helps students learn how large language model generate text.</p>
+            <h2 class="experience-sub-title project-title">Think Like AI</h2>
+            <p class="project-description">An interactive learning tool designed to help students understand Large Language Models (LLMs). 
+              <strong>This software has evolved over time</strong> to cover different LLMs concept. </p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='thinkLikeAi.html'"
               >
-                Github
+                Learn More
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href=''"
+                onclick="location.href='https://attentionapp-1338190964.us-central1.run.app'"
               >
-                Live Demo
+                Live Demo of Latest Version
               </button>
 
               <button
@@ -280,38 +268,6 @@
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://banditexplorer.pythonanywhere.com/'"
-              >
-                Live Demo
-              </button>
-
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href=''"
-              >
-                Paper
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/prjoect-4.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Think Like AI</h2>
-            <p class="project-description">An interactive learning tool that allows students to change the values of ChatGPT-encoded parameters (temperature and top_p), observe how these changes affect the sampling distribution of possible next words, and learn about the concept of tokens in language generation.</p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/saniavn/ThinkLikeAI/tree/main'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href=''"
               >
                 Live Demo
               </button>
@@ -436,15 +392,6 @@
         <h1 class="title">News</h1>
         <div class="experience-details-container">
           <div class="about-containers">
-            <!-- <div class="details-container">
-              <h2 class="experience-sub-title"></h2>
-              <div class="article-container">
-
-
-
-
-          </div>
-        </div> -->
         <img
           src="./assets/arrow.png"
           alt="Arrow icon"
@@ -482,7 +429,6 @@
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">News</a></li>
-            <!-- <li><a href="#news">News</a></li> -->
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
