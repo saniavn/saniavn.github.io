@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Projects - Saniya Vahedian Movahed</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <style>
+      #projects {
+        height: fit-content;
+        min-height: 100vh;
+        margin-bottom: 4rem;
+        padding-top: 4vh;
+      }
+
+      .about-containers {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      .details-container {
+        max-width: 400px;
+        flex: 1 1 300px;
+      }
+
+      .article-container {
+        position: relative;
+      }
+
+      .article-container .project-img {
+        display: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* This makes sure the image with 'active' is seen */
+      .article-container .project-img.active {
+        display: block;
+      }
+
+      .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 5px;
+        user-select: none;
+        transition: background 0.3s;
+        z-index: 10;
+      }
+
+      .carousel-arrow:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .carousel-arrow.prev {
+        left: 10px;
+      }
+
+      .carousel-arrow.next {
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Research Projects</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li>
+            <a
+              href="#"
+              style="text-decoration: underline; text-decoration-color: #e85d04"
+              >Projects</a
+            >
+          </li>
+          <li><a href="index.html#experience">News</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#" onclick="toggleMenu()">All Projects</a></li>
+          <li>
+            <a href="index.html#contact" onclick="toggleMenu()">Contact</a>
+          </li>
+        </div>
+      </div>
+    </nav>
+
+    <section id="projects">
+      <p class="section__text__p1">Browse My Work</p>
+      <h1 class="title">Research Projects</h1>
+
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/TLA-latest.png"
+                alt="Think Like AI"
+                class="project-img active"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Think Like AI</h2>
+            <p class="project-description">
+              This demo is designed to help students understand how Large
+              Language Models (LLMs) work.
+              <strong>The software has evolved over time</strong> to cover
+              various LLM concepts.
+            </p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href = 'thinkLikeAi.html'"
+              >
+                View Versions
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="
+                  location.href =
+                    'https://attentionapp-1338190964.us-central1.run.app'
+                "
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <!-- <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/prjoect-5.png"
+                alt="SpotAI"
+                class="project-img active"
+              />
+            </div> -->
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/SpotAI1.png"
+                alt="SpotAI Main View"
+                class="project-img active"
+              />
+
+              <!-- <img
+                src="./assets/SpotAI2.png"
+                alt="SpotAI Detail View"
+                class="project-img"
+              /> -->
+              <img
+                src="./assets/SpotAI3.png"
+                alt="SpotAI Detail View"
+                class="project-img"
+              />
+              <img
+                src="./assets/SpotAI4.png"
+                alt="SpotAI Detail View"
+                class="project-img"
+              />
+
+              <button
+                class="carousel-arrow prev"
+                onclick="changeImage(this, -1)"
+              >
+                &#10094;
+              </button>
+              <button
+                class="carousel-arrow next"
+                onclick="changeImage(this, 1)"
+              >
+                &#10095;
+              </button>
+            </div>
+            <h2 class="experience-sub-title project-title">SpotAI</h2>
+            <p class="project-description">
+              Introduces students to deepfakes through hands-on activities:
+              judging real vs. manipulated media, experimenting with AI image
+              editing and face swapping, and reflecting on ethical scenarios
+              involving misinformation and harm. Developed and tested with
+              middle schoolers (Summer 2025).
+            </p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href = 'https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href = '#'"
+              >
+                Live Demo
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href = '#'"
+              >
+                Paper
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/PromptPeek1.png"
+                alt="PromptPeek Main View"
+                class="project-img active"
+              />
+
+              <img
+                src="./assets/PromptPeek2.png"
+                alt="PromptPeek Detail View"
+                class="project-img"
+              />
+
+              <button
+                class="carousel-arrow prev"
+                onclick="changeImage(this, -1)"
+              >
+                &#10094;
+              </button>
+              <button
+                class="carousel-arrow next"
+                onclick="changeImage(this, 1)"
+              >
+                &#10095;
+              </button>
+            </div>
+
+            <h2 class="experience-sub-title project-title">PromptPeek</h2>
+            <p class="project-description">
+              Engages students in prompt construction and reverse prompting
+              activities to explore AI limitations like negation failures (e.g.,
+              "no elephants"), gendered stereotypes, privacy implications, and
+              reliability issues. Developed and tested with middle schoolers
+              (Summer 2025).
+            </p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href = 'https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="
+                  location.href = 'https://promptpeek.pythonanywhere.com/'
+                "
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Bandit Explorer1.png"
+                alt="prjoect-6 Main View"
+                class="project-img active"
+              />
+
+              <img
+                src="./assets/Bandit Explorer2.png"
+                alt="Bandit Explorer Detail View"
+                class="project-img"
+              />
+
+              <button
+                class="carousel-arrow prev"
+                onclick="changeImage(this, -1)"
+              >
+                &#10094;
+              </button>
+              <button
+                class="carousel-arrow next"
+                onclick="changeImage(this, 1)"
+              >
+                &#10095;
+              </button>
+            </div>
+            <h2 class="experience-sub-title project-title">Bandit Explorer</h2>
+            <p class="project-description">
+              Interactive tool demystifying recommender systems by letting
+              learners adjust exploration parameters and observe how platforms
+              like YouTube balance exploring new content with exploiting user
+              preferences. Developed in summer 2025 and tested with middle
+              schoolers.
+            </p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href = 'https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="
+                  location.href = 'https://banditexplorer.pythonanywhere.com/'
+                "
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Next Word Adventure1.png"
+                alt="Next Word Adventure"
+                class="project-img active"
+              />
+
+              <img
+                src="./assets/Next Word Adventure2.png"
+                alt="Next Word Adventure Detail View"
+                class="project-img"
+              />
+
+              <button
+                class="carousel-arrow prev"
+                onclick="changeImage(this, -1)"
+              >
+                &#10094;
+              </button>
+              <button
+                class="carousel-arrow next"
+                onclick="changeImage(this, 1)"
+              >
+                &#10095;
+              </button>
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Next Word Adventure
+            </h2>
+            <p class="project-description">
+              Demonstrates how n-gram models predict the next word. User study
+              (N=48) showed significant improvements in understanding the
+              statistical nature of AI.
+            </p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href = 'https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="
+                  location.href = 'https://ngramadventure.pythonanywhere.com/'
+                "
+              >
+                Live Demo
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="
+                  location.href =
+                    'https://dl.acm.org/doi/10.1145/3706599.3719789'
+                "
+              >
+                Paper
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="AI Chef Trainer"
+                class="project-img active"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">AI Chef Trainer</h2>
+            <p class="project-description">
+              Introduces children to the importance of data in ML through a
+              cyclical process of testing, contributing, and retraining.
+            </p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="
+                  location.href = 'https://github.com/saniavn/AI-Chef-Trainer'
+                "
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href = 'https://aichef.pythonanywhere.com/'"
+              >
+                Live Demo
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="
+                  location.href =
+                    'https://ojs.aaai.org/index.php/AAAI/article/view/35196'
+                "
+              >
+                Paper
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Ask Me Anything"
+                class="project-img active"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Ask Me Anything</h2>
+            <p class="project-description">
+              Topic-specific chatbot using GPT-3 (davinci-002). Tailored
+              responses for students to test AI knowledge and trust.
+            </p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="
+                  location.href = 'https://github.com/saniavn/Ask-Me-Anything'
+                "
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href = '#'"
+              >
+                Paper
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <p style="font-size: 0.8rem; margin-top: 5px; opacity: 0.7">
+        <a
+          href="https://github.com/Ade-mir/html-css-js-portfolio-tutorial-2"
+          target="_blank"
+          style="color: inherit; text-decoration: underline"
+        ></a>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      function changeImage(button, direction) {
+        const container = button.parentElement;
+
+        const images = container.querySelectorAll(".project-img");
+
+        let activeIndex = -1;
+        images.forEach((img, index) => {
+          if (img.classList.contains("active")) {
+            activeIndex = index;
+            img.classList.remove("active"); // Hide current image
+          }
+        });
+
+        let newIndex = activeIndex + direction;
+
+        if (newIndex >= images.length) {
+          newIndex = 0;
+        } else if (newIndex < 0) {
+          newIndex = images.length - 1; // Loop to end
+        }
+
+        images[newIndex].classList.add("active");
+      }
+    </script>
+  </body>
+</html>

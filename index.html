@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,7 +8,42 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <style>
+      .job-market-banner {
+        background-color: #f0f8ff;
+        color: #0056b3;
+        padding: 10px 15px;
+        border-radius: 8px;
+        margin: 15px 0;
+        border-left: 5px solid #e85d04;
+        font-weight: 600;
+        display: block;
+        width: fit-content;
+      }
 
+      .article-container {
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+        border-radius: 2rem;
+        margin-bottom: 1rem;
+        background-color: #f0f0f0; /* Grey background if image loads slowly */
+      }
+
+      .project-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Crops the image slightly to fit - NO stretching */
+        border-radius: 2rem;
+        transition: transform 0.3s ease;
+      }
+
+      project-description {
+        text-align: justify;
+        margin-bottom: 1rem; /* Ensures space before buttons */
+      }
+      .article-container:hover .project-img {
+        transform: scale(1.05);
+      }
     </style>
   </head>
   <body>
@@ -47,9 +82,11 @@
         <p class="section__text__p1">Hi, I'm</p>
         <h1 class="title">Sania</h1>
 
-
         <div class="btn-container">
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          <button
+            class="btn btn-color-1"
+            onclick="location.href = './#contact'"
+          >
             Contact Info
           </button>
         </div>
@@ -58,46 +95,72 @@
             src="./assets/linkedin.png"
             alt="My LinkedIn profile"
             class="icon"
-            onclick="location.href='https://www.linkedin.com/in/saniavn/'"
+            onclick="location.href = 'https://www.linkedin.com/in/saniavn/'"
           />
           <img
             src="./assets/github.png"
             alt="My Github profile"
             class="icon"
-            onclick="location.href='https://github.com/saniavn'"
+            onclick="location.href = 'https://github.com/saniavn'"
           />
           <img
             src="./assets/5-1.png"
             alt="My Google Scholar profile"
             class="icon"
-            onclick="location.href='https://scholar.google.com/citations?user=4BzE-xQAAAAJ&hl=en'"
+            onclick="
+              location.href =
+                'https://scholar.google.com/citations?user=4BzE-xQAAAAJ&hl=en'
+            "
           />
         </div>
       </div>
     </section>
-    
+
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
       <div class="section-container">
         <div class="about-details-container">
-          
           <div class="text-container">
             <p>
-              I am currently a fifth-year PhD student, advised by <a href="https://www.cs.cmu.edu/~dst/" target="_blank">David Touretzky</a> and <a href="https://caicc.utsa.edu/faculty/profiles/quarles-john.html" target="_blank">John Quarles</a>, focusing on developing software to introduce children to AI.
-              My PhD journey began with studying multi-armed bandits at <a href="https://www.pearl-robotics.com/home" target="_blank">the PeARL Lab</a>, before I transitioned to pursuing my passion for educational technology in AI.
+              I am currently a fifth-year PhD student, advised by
+              <a href="https://www.cs.cmu.edu/~dst/" target="_blank"
+                >David Touretzky</a
+              >
+              and
+              <a
+                href="https://caicc.utsa.edu/faculty/profiles/quarles-john.html"
+                target="_blank"
+                >John Quarles</a
+              >, focusing on developing software to introduce children to AI. My
+              PhD journey began with studying multi-armed bandits at
+              <a href="https://www.pearl-robotics.com/home" target="_blank"
+                >the PeARL Lab</a
+              >, before I transitioned to pursuing my passion for educational
+              technology in AI.
             </p>
 
             <p>
-              Prior to my PhD, I gained valuable experience at <a href="https://anm.com" target="_blank">the anm</a>, <a href="https://www.broadinstitute.org/" target="_blank">the Broad Institute</a>, and <a href="https://privacytools.seas.harvard.edu/" target="_blank">the Harvard Privacy Tools Project</a>.
+              Prior to my PhD, I gained valuable experience at
+              <a href="https://anm.com" target="_blank">the anm</a>,
+              <a href="https://www.broadinstitute.org/" target="_blank"
+                >the Broad Institute</a
+              >, and
+              <a href="https://privacytools.seas.harvard.edu/" target="_blank"
+                >the Harvard Privacy Tools Project</a
+              >.
             </p>
 
             <div class="job-market-banner">
-              I am currently on the academic job market.
+              📢 I am currently on the job market for
+              <strong>full-time research positions</strong>.
             </div>
 
             <p>
-              Outside of my professional interests, I enjoy cycling and hiking through nature. I recently completed my first marathon in December 2025 and am training for my second one soon. I also enjoy caring for city feral cats.
+              Outside of my professional interests, I enjoy cycling and hiking
+              through nature. I recently completed my first marathon in December
+              2025 and am training for my second one soon. I also enjoy caring
+              for city feral cats.
             </p>
           </div>
           <div class="about-containers">
@@ -128,153 +191,111 @@
             <div class="details-container">
               <h3>Education</h3>
               <p>
-                Ph.D. in Computer Science, University of Texas at San Antonio (in progress)<br />
-                M.Sc. in Computer Science, Western Michigan University <br/>
-                M.Sc. in Artificial Intelligence, Shiraz University <br/>
+                Ph.D. in Computer Science, University of Texas at San Antonio
+                (in progress)<br />
+                M.Sc. in Computer Science, Western Michigan University <br />
+                M.Sc. in Artificial Intelligence, Shiraz University <br />
                 B.E. in Computer Software Engineering, Azad University
               </p>
             </div>
           </div>
-
         </div>
       </div>
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
         class="icon arrow"
-        onclick="location.href='./#experience'"
+        onclick="location.href = './#experience'"
       />
     </section>
 
     <section id="projects">
-      <p class="section__text__p1">My Most Recent</p>
+      <p class="section__text__p1">Selected Recent</p>
       <h1 class="title">Projects</h1>
+      <div style="display: flex; justify-content: center; margin-top: 2rem">
+        <button
+          class="btn btn-color-2"
+          onclick="location.href = 'projects.html'"
+          style="width: auto; padding-left: 2rem; padding-right: 2rem"
+        >
+          View All Projects
+        </button>
+      </div>
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/TLA-latest.png"
-                alt="Project 1"
+                alt="Think Like AI"
                 class="project-img"
               />
             </div>
             <h2 class="experience-sub-title project-title">Think Like AI</h2>
-            <p class="project-description">An interactive learning tool designed to help students understand Large Language Models (LLMs). 
-              <strong>This software has evolved over time</strong> to cover different LLMs concept. </p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='thinkLikeAi.html'"
-              >
-                Learn More
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://attentionapp-1338190964.us-central1.run.app'"
-              >
-                Live Demo of Latest Version
-              </button>
+            <p class="project-description">
+              This demo is designed to help students understand how Large
+              Language Models (LLMs) work.
+              <strong>The software has evolved over time</strong> to cover
+              various LLM concepts.
+            </p>
 
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href=''"
-              >
-                Paper
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/prjoect-5.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">SpotAI</h2>
-            <p class="project-description">An interactive learning tool that helps students to learn about Deepfake and its ethical implications.</p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href = 'thinkLikeAi.html'"
               >
-                Github
+                View Versions
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href=''"
+                onclick="
+                  location.href =
+                    'https://attentionapp-1338190964.us-central1.run.app'
+                "
               >
                 Live Demo
               </button>
-
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href=''"
+                onclick="location.href = ''"
               >
                 Paper
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/prjoect-8.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">PromptPeek</h2>
-            <p class="project-description">This interactive platform empowers students to experiment with prompts, see the results, and better understand the strengths and limiations of these technology. </p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://promptpeek.pythonanywhere.com/'"
-              >
-                Live Demo
-              </button>
 
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href=''"
-              >
-                Paper
-              </button>
-            </div>
-          </div>
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/prjoect-6.png"
-                alt="Project 1"
+                src="./assets/Bandit Explorer1.png"
+                alt="Bandit Explorer"
                 class="project-img"
               />
             </div>
             <h2 class="experience-sub-title project-title">Bandit Explorer</h2>
-            <p class="project-description">An interactive tool demystifies the workings of real-world recommender systems. By simulating how platforms like YouTube recommend content.</p>
+            <p class="project-description">
+              An interactive tool demystifying recommender systems by simulating
+              how platforms like YouTube recommend content using Multi-Armed
+              Bandits.
+            </p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href = 'https://github.com/'"
               >
                 Github
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://banditexplorer.pythonanywhere.com/'"
+                onclick="
+                  location.href = 'https://banditexplorer.pythonanywhere.com/'
+                "
               >
                 Live Demo
               </button>
-
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href=''"
+                onclick="location.href = ''"
               >
                 Paper
               </button>
@@ -284,96 +305,83 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-1.png"
-                alt="Project 1"
+                src="./assets/Next Word Adventure1.png"
+                alt="Next Word Adventure"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Next Word Adventure</h2>
-             <p class="project-description">An interactive learning tool that showcase how n-gram model suggest the next word. Tested with 48 students in an after school program, students recognized that N-grams rely on statistical data and do not "understand" text in any cognitive sense, marking a significant shift in understanding.</p>
+            <h2 class="experience-sub-title project-title">
+              Next Word Adventure
+            </h2>
+            <p class="project-description">
+              An interactive learning tool that demonstrates how n-gram models
+              predict the next word. Tested with 48 students (Fall 2024),
+              showing significant improvements in their understanding of the
+              concept.
+            </p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href = 'https://github.com/'"
               >
                 Github
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://ngramadventure.pythonanywhere.com/'"
+                onclick="
+                  location.href = 'https://ngramadventure.pythonanywhere.com/'
+                "
               >
                 Live Demo
               </button>
 
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://dl.acm.org/doi/10.1145/3706599.3719789'"
+                onclick="
+                  location.href =
+                    'https://dl.acm.org/doi/10.1145/3706599.3719789'
+                "
               >
                 Paper
               </button>
             </div>
           </div>
+
           <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/project-2.png"
-                alt="Project 2"
+                alt="AI Chef Trainer"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">AI Chef Trianer</h2>
-             <p class="project-description">The AI chef Trainer introduce children to the importance of data in ML, the software engaged students in a cyclical process of testing, contributing, retraining, and post-training testing. Tested with 52 students in an after school program. Students recognized the importance of data quantity and specificity. </p>
+            <h2 class="experience-sub-title project-title">AI Chef Trainer</h2>
+            <p class="project-description">
+              Introduces children to the importance of data in ML through a
+              cyclical process of testing, contributing, and retraining. Tested
+              with 52 students.
+            </p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/saniavn/AI-Chef-Trainer'"
+                onclick="
+                  location.href = 'https://github.com/saniavn/AI-Chef-Trainer'
+                "
               >
                 Github
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://aichef.pythonanywhere.com/'"
+                onclick="location.href = 'https://aichef.pythonanywhere.com/'"
               >
                 Live Demo
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href= 'https://ojs.aaai.org/index.php/AAAI/article/view/35196'"
-              >
-                Paper
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Ask Me Anything</h2>
-            <p class="project-description">
-  Ask Me Anything is a topic-specific chatbot powered by the ChatGPT-3 engine, using the text-davinci-002 model. In deploying the ChatGPT API, it was crucial for the chatbot to stay on topic and tailor responses to the age of the students. Tested with 63 students, feedback and interactions revealed that the students not only trusted the AI but were also eager to test its knowledge with their own questions.
-</p>
-
-
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/saniavn/Ask-Me-Anything'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href="
-              >
-                Craft
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href="
+                onclick="
+                  location.href =
+                    'https://ojs.aaai.org/index.php/AAAI/article/view/35196'
+                "
               >
                 Paper
               </button>
@@ -381,25 +389,29 @@
           </div>
         </div>
       </div>
+
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
         class="icon arrow"
-        onclick="location.href='./#contact'"
+        onclick="location.href = './#contact'"
       />
-      <section id="experience">
-        <p class="section__text__p1"></p>
-        <h1 class="title">News</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#projects'"
-        />
-      </section>
     </section>
+
+    <section id="experience">
+      <p class="section__text__p1"></p>
+      <h1 class="title">News</h1>
+      <div class="experience-details-container">
+        <div class="about-containers"></div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href = './#projects'"
+      />
+    </section>
+
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
@@ -410,7 +422,11 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:examplemail@gmail.com">saniya.vahedian.movahed@gmail.com</a></p>
+          <p>
+            <a href="mailto:examplemail@gmail.com"
+              >saniya.vahedian.movahed@gmail.com</a
+            >
+          </p>
         </div>
         <div class="contact-info-container">
           <img
