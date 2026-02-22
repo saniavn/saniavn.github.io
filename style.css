@@ -486,22 +486,3 @@ footer p {
   display: block;
   width: fit-content; /* THIS IS THE FIX */
 }
-.news-list {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  width: 100%;
-}
-
-.news-item {
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  /* border-bottom: 1px solid #e0e0e0; */
-  font-size: 1.1rem;
-}
-
-.news-date {
-  font-weight: bold;
-  color: #e85d04; /* DIDNT CHANGE */
-  margin-right: 10px;
-}

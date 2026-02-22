@@ -44,6 +44,27 @@
       .article-container:hover .project-img {
         transform: scale(1.05);
       }
+      .news-list {
+        text-align: left;
+        list-style: none;
+        padding: 0;
+      }
+
+      .news-item {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+        align-items: flex-start;
+      }
+
+      .news-date {
+        color: #e85d04;
+        font-weight: bold;
+        white-space: nowrap;
+        min-width: 120px;
+      }
     </style>
   </head>
   <body>
@@ -403,12 +424,18 @@
       <h1 class="title">News</h1>
       <div class="experience-details-container">
         <div class="about-containers">
-          <div class="details-container" style="width: 100%; padding: 2rem">
+          <div
+            class="details-container"
+            style="width: 100%; padding: 2rem; text-align: left"
+          >
             <div class="news-list">
               <div class="news-item">
-                <span class="news-date">February 2026</span>
-                Received a $500 Travel Grant for the Professional Development
-                Session for New and Aspiring Educators (SNAE) at SIGCSE 2026.
+                <div class="news-date">February 2026</div>
+                <div>
+                  Received a $500 Travel Grant for the Professional Development
+                  Session for New and Aspiring Educators (SNAE) at
+                  <strong>SIGCSE 2026</strong>.
+                </div>
               </div>
             </div>
           </div>
