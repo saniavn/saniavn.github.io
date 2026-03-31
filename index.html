@@ -53,17 +53,26 @@
       .news-item {
         display: flex;
         flex-direction: row;
-        gap: 10px;
-        margin-bottom: 10px;
-        font-size: 1.1rem;
-        align-items: flex-start;
+        gap: 20px; /* Space between Date and the List of items */
+        margin-bottom: 20px;
+        align-items: flex-start; /* Keeps the date at the top */
       }
 
       .news-date {
         color: #e85d04;
         font-weight: bold;
+        min-width: 140px;
         white-space: nowrap;
-        min-width: 120px;
+      }
+
+      .news-content {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .news-entry {
+        line-height: 1.5;
       }
     </style>
   </head>
@@ -430,11 +439,31 @@
           >
             <div class="news-list">
               <div class="news-item">
+                <div class="news-date">March 2026</div>
+                <div class="news-content">
+                  <div class="news-entry">
+                    Invited Speaker at <strong>AI4MiddleSchool</strong> (March
+                    28).
+                  </div>
+                </div>
+              </div>
+
+              <div class="news-item">
                 <div class="news-date">February 2026</div>
-                <div>
-                  Received a $500 Travel Grant for the Professional Development
-                  Session for New and Aspiring Educators (SNAE) at
-                  <strong>SIGCSE 2026</strong>.
+                <div class="news-content">
+                  <div class="news-entry">
+                    Invited Judge for the Middle School AI Competition,
+                    <strong>AI4MiddleSchool</strong> (February 21).
+                  </div>
+                  <div class="news-entry">
+                    Received a $500 Travel Grant for the Professional
+                    Development Session for New and Aspiring Educators (SNAE) at
+                    <strong>SIGCSE 2026</strong>.
+                  </div>
+                  <div class="news-entry">
+                    Invited Reviewer for the Interaction Design and Children
+                    (<strong>IDC 2026</strong>) Conference.
+                  </div>
                 </div>
               </div>
             </div>
